@@ -1,3 +1,21 @@
+
+✨ Acknowledgment
+
+Thanks to: https://github.com/manuelernestog/astropod which this repo is based on.
+
+>   Free and open source self-hosting serverless podcast solution 
+
+```sh
+#git clone https://github.com/JAlcocerT/astropod
+#npm install
+npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+#npm run build
+#npm install -g serve #serve with npm
+#serve -s dist #http://localhost:3000
+```
+---
+
+
 # Astropod | Free and Open Source Serverless Podcast
 
 ![Atropod](https://github.com/manuelernestog/manuelernestog/assets/53962116/3106bf65-37f9-427f-9b50-72d7ae22752f)
