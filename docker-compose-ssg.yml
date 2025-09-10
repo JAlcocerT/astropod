@@ -1,5 +1,5 @@
-# Docker Compose for Astro Static Site Generation
-# https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs/Astro
+# Docker Compose for Astropod - Podcast Template
+# Astro-based podcast website with local development and production builds
 
 services:
   # Astro Development Server
@@ -10,7 +10,7 @@ services:
     ports:
       - "4321:4321"  # Astro dev server with live changes - Go to http://localhost:4321/
     volumes:
-      - ./landing-page-book-astro-tailwind:/app
+      - .:/app
       - node_modules_dev:/app/node_modules  # Named volume for node_modules
     command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 4321"
     environment:
@@ -18,7 +18,7 @@ services:
       - HOST=0.0.0.0
       - PORT=4321
     networks:
-      - project-sellyourebook
+      - astropod-network
     tty: true
     stdin_open: true
     restart: unless-stopped
@@ -35,7 +35,7 @@ services:
     container_name: astro-prod
     working_dir: /app
     volumes:
-      - ./landing-page-book-astro-tailwind:/app
+      - .:/app
       - node_modules_prod:/app/node_modules  # Named volume for node_modules
     ports:
       - "8090:4321"  # Production server on port 8090
@@ -47,7 +47,7 @@ services:
       - NODE_ENV=production
       - PORT=4321
     networks:
-      - project-sellyourebook
+      - astropod-network
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:4321/"]
@@ -85,5 +85,5 @@ volumes:
   node_modules_prod:
 
 networks:
-  project-sellyourebook:
+  astropod-network:
     driver: bridge

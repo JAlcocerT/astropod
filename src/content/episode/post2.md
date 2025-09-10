@@ -1,5 +1,6 @@
 ---
 title: Demo Episode with Local Audio
+description: "This episode demonstrates how to use local audio files with Astropod. It includes markdown formatting examples, code blocks, and tables to showcase the rich content capabilities."
 audioUrl: /local-audio.mp3
 pubDate: Sep 10 2021
 duration: 00:32

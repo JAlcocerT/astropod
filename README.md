@@ -13,6 +13,16 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 #npm install -g serve #serve with npm
 #serve -s dist #http://localhost:3000
 ```
+
+
+```sh
+make quick-dev
+make quick-prod
+```
+
+
+> Commented about the setup at **[this post](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#podcast-website)**
+
 ---
 
 
