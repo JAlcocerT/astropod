@@ -5,7 +5,7 @@ services:
   # Astro Development Server
   astro-dev:
     image: node:22.16-alpine3.22
-    container_name: astro-dev
+    container_name: astropod-dev
     working_dir: /app
     ports:
       - "4321:4321"  # Astro dev server with live changes - Go to http://localhost:4321/
@@ -32,7 +32,7 @@ services:
   # Astro Production Build & Serve
   astro-prod:
     image: node:22.16-alpine3.22
-    container_name: astro-prod
+    container_name: astropod-prod
     working_dir: /app
     volumes:
       - .:/app
