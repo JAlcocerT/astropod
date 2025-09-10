@@ -40,7 +40,7 @@ services:
     ports:
       - "8090:4321"  # Production server on port 8090
     command: >
-      sh -c "npm install && 
+      sh -c "npm install --include=dev && 
       npm run build && 
       npx http-server ./dist -p 4321 -a 0.0.0.0"
     environment:
