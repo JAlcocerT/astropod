@@ -1,3 +1,6 @@
+# AstroPOD
+
+* https://github.com/JAlcocerT/astropod
 
 ✨ Acknowledgment
 
@@ -16,6 +19,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 
 ```sh
+#make help
 make quick-dev
 make quick-prod
 ```
